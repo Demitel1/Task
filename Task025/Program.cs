@@ -1,15 +1,21 @@
 ﻿Console.Clear();
 
-int getUserValue(string message)
+int getUserValue(string messege)
 {
-    Console.Write(message);
+    Console.Write(messege);
     int result = int.Parse(Console.ReadLine()!);
     return result;
 }
-int number1 = getUserValue("Введите первое число: ");
-int number2 = getUserValue("Введите второе число: ");
 
-if(number1 > 0 && number2 > 0)
+int number1 = getUserValue("Введите число: ");
+int number2 = getUserValue("Введите степень числа: ");
+
+int degree = 0;
+int sum = 1;
+while(degree < number2)
 {
-    Console.Write(Math.Pow(number1, number2));
+    sum = sum * number1;
+    degree++;
 }
+
+Console.WriteLine($"{sum}");
