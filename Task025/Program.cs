@@ -12,6 +12,7 @@ int number2 = getUserValue("Введите степень числа: ");
 
 int degree = 0;
 int sum = 1;
+
 while(degree < number2)
 {
     sum = sum * number1;
