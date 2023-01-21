@@ -10,13 +10,20 @@ int getUserValue(string messege)
 int number1 = getUserValue("Введите число: ");
 int number2 = getUserValue("Введите степень числа: ");
 
-int degree = 0;
-int sum = 1;
 
-while(degree < number2)
+
+int getDegreeOfNumber(int number1, int number2)
 {
-    sum = sum * number1;
-    degree++;
+    int degree = 0;
+    int sum = 1;
+    while(degree < number2)
+    {
+        sum = sum * number1;
+        degree++;
+    }
+    return sum;
 }
 
-Console.WriteLine($"{sum}");
+int degree = getDegreeOfNumber(number1, number2);
+
+Console.WriteLine($"{number2} cтепень числа {number1} = {degree}");
