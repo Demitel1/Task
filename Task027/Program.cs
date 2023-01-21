@@ -8,12 +8,17 @@ int getUserValue(string messege)
 }
 
 int number = getUserValue("Введите число: ");
-int i = 0;
-while(number > 0)
+
+int getNumberOfDigit(int number)
 {
-    i = i + number % 10;
-    number = number / 10;
+    int i = 0;
+    while(number > 0)
+    {
+        i = i + number % 10;
+        number = number / 10;
+    }
     return i;
 }
 
-Console.Write($"Сумма чисел {number} = {i}");
+int number2 = getNumberOfDigit(number);
+Console.Write($"Сумма чисел {number} = {number2}");
