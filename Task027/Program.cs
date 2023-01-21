@@ -1,15 +1,19 @@
 ﻿Console.Clear();
 
-int getUserValue(string message)
+int getUserValue(string messege)
 {
-    Console.Write(message);
+    Console.Write(messege);
     int result = int.Parse(Console.ReadLine()!);
     return result;
 }
-int number1 = getUserValue("Введите первое число: ");
-int number2 = getUserValue("Введите второе число: ");
 
-if(number1 > 0 && number2 > 0)
+int number = getUserValue("Введите число: ");
+int i = 0;
+while(number > 0)
 {
-    Console.Write(Math.Pow(number1, number2));
+    i = i + number % 10;
+    number = number / 10;
+    return i;
 }
+
+Console.Write($"Сумма чисел {number} = {i}");
