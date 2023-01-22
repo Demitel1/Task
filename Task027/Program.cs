@@ -7,7 +7,7 @@ int getUserValue(string messege)
     return result;
 }
 
-int number = getUserValue("Введите число: ");
+
 
 int getNumberOfDigit(int number)
 {
@@ -20,5 +20,6 @@ int getNumberOfDigit(int number)
     return i;
 }
 
+int number = getUserValue("Введите число: ");
 int number2 = getNumberOfDigit(number);
 Console.Write($"Сумма чисел {number} = {number2}");
