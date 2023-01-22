@@ -7,8 +7,6 @@ int getUserValue(string messege)
     return result;
 }
 
-
-
 int getNumberOfDigit(int number)
 {
     int i = 0;

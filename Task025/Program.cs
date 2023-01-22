@@ -7,11 +7,6 @@ int getUserValue(string messege)
     return result;
 }
 
-int number1 = getUserValue("Введите число: ");
-int number2 = getUserValue("Введите степень числа: ");
-
-
-
 int getDegreeOfNumber(int number1, int number2)
 {
     int degree = 0;
@@ -24,6 +19,8 @@ int getDegreeOfNumber(int number1, int number2)
     return sum;
 }
 
+int number1 = getUserValue("Введите число: ");
+int number2 = getUserValue("Введите степень числа: ");
 int degree = getDegreeOfNumber(number1, number2);
 
 Console.WriteLine($"{number2} cтепень числа {number1} = {degree}");
