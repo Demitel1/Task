@@ -21,5 +21,4 @@ void showArray(int[] array)
 }
 
 int[] array = getArrayRandom(8);
-
 showArray(array);
