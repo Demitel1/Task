@@ -9,12 +9,12 @@ int[] getUserValue(string message)
 
 int[] number = getUserValue("Введите числа через пробел: ");
 
-int getResultNumber(int number)
+int[] getResultNumber(int number)
 {
-    int count = 0;
+    int[] count = 0;
     for (int i = 0; i < number.Length; i++)
     {
-        if (number[i] > 0)
+        if (number > 0)
         {
             count++;
         }
@@ -22,6 +22,6 @@ int getResultNumber(int number)
     return count;   
 }
 
-int count = getResultNumber(number);
+int[] count = getResultNumber(number);
 
 Console.WriteLine($"Кол-во элементов > 0: {count}");

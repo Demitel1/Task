@@ -1,6 +1,8 @@
-﻿int getUserValue(string message)
+﻿Console.Clear();
+
+int getUserValue(string message)
 {
-    int result = int.Parse(Console.ReadLine());
+    int result = int.Parse(Console.ReadLine()!);
     return result;
 }
 
