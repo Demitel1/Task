@@ -1,29 +1,24 @@
-﻿Console.Clear();
+﻿Console.WriteLine("введите значение b1");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число k1");
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите значение b2");
+double b2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число k2");
+double k2 = Convert.ToInt32(Console.ReadLine());
 
-int getUserValue(string message)
+double getResultX(double b1, double b2, double k1, double k2)
 {
-    int result = int.Parse(Console.ReadLine()!);
-    return result;
-}
-
- 
-double getX(double k1,double b1,double k2,double b2)
-{
-    var x = (b1 - b2) / (k1 - k2);
+    double x = (-b2 + b1)/(-k1 + k2);
     return x;
 }
 
-double getY(double k1,double b1,double x)
+double getResultY(double b1, double k1, double x)
 {
-    var y = k1 * x + b1;
+    double y = k1 * x + b1;
     return y;
 }
 
-var k1 = getUserValue("Введите k1: ");
-var b1 = getUserValue("Введите b1: ");
-var k2 = getUserValue("Введите k2: ");
-var b2 = getUserValue("Введите b2: ");
-var x = getX(k1,b1,k2,b2);
-var y = getY(k1,b1,x);
-
-Console.WriteLine($"Пересечение прямых в точке: ({x};{y})");
+double x = getResultX(b1,b2,k1,k2);
+double y = getResultY(b1,k1,x); 
+Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
