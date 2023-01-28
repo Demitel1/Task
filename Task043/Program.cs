@@ -1,11 +1,11 @@
-﻿Console.WriteLine("введите значение b1");
-double b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число k1");
-double k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите значение b2");
-double b2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число k2");
-double k2 = Convert.ToInt32(Console.ReadLine());
+﻿Console.Clear();
+
+double getUserValue(string message)
+{
+    Console.Write(message);
+    int result = int.Parse(Console.ReadLine()!);
+    return result;
+}
 
 double getResultX(double b1, double b2, double k1, double k2)
 {
@@ -19,6 +19,10 @@ double getResultY(double b1, double k1, double x)
     return y;
 }
 
+double k1 = getUserValue("Введите значение k1: ");
+double b1 = getUserValue("Введите значение b1: ");
+double k2 = getUserValue("Введите значение k2: ");
+double b2 = getUserValue("Введите значение b2: ");
 double x = getResultX(b1,b2,k1,k2);
 double y = getResultY(b1,k1,x); 
-Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
+Console.Write($"Пересечение двух прямых в точке с координатами X: {x}, Y: {y}");
