@@ -15,11 +15,7 @@ int getSum(int[] array)
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (i == 0)
-        {
-            sum = sum + array[i];
-        }
-        else if(i / 2 != 0)
+        if (i % 2 == 0)
         {
             sum = sum + array[i];
         }
@@ -42,4 +38,4 @@ void showArray(int[] array)
 int[] array = getArrayRandom(5);
 int sum = getSum(array);
 showArray(array);
-Console.WriteLine($" -> cумма нечетных чисел = {sum}");
+Console.WriteLine($" -> cумма чисел на нечётных позициях = {sum}");
