@@ -18,8 +18,9 @@ int[] getResultNumber(int number)
         {
             count++;
         }
+        return count; 
     }
-    return count;   
+      
 }
 
 int[] count = getResultNumber(number);
