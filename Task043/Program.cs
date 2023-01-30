@@ -13,9 +13,9 @@ double getPointX(double b1, double k1, double b2, double k2)
     return x;
 }
 
-double getPointY(double x, double b2, double k2)
+double getPointY(double x, double b1, double k1)
 {
-    double y = k2 * x + b2;
+    double y = k1 * x + b1;
     return y;
 }
 
@@ -30,5 +30,5 @@ double b2 = getUserValue("введите значение b2: ");
 double k2 = getUserValue("введите число k2: ");
 
 double x = getPointX(b1,k1,b2,k2);
-double y = getPointY(x,b2,k2);
+double y = getPointY(x,b1,k1);
 PrintPoints(x,y);
