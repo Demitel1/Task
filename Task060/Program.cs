@@ -1,4 +1,6 @@
-﻿int deep1 = getUserValue("Введите размерность 1: ");
+﻿Console.Clear();
+
+int deep1 = getUserValue("Введите размерность 1: ");
 int deep2 = getUserValue("Введите размерность 2: ");
 int deep3 = getUserValue("Введите размерность 3: ");
 int countNums = 100;
