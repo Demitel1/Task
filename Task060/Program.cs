@@ -8,7 +8,7 @@ int countNums = 100;
 int getUserValue(string output)
 {
     Console.Write(output);
-    return int.Parse(Console.ReadLine());
+    return int.Parse(Console.ReadLine()!);
 }
 
 
