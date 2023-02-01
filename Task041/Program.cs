@@ -1,27 +1,30 @@
 ﻿Console.Clear();
 
-string inputStr = ReadString("Введите числа через зяпятую: ");
-int count = 0;
-string tmpStr = string.Empty;
-
-for (int i = 0; i < inputStr.Length; i++)
-{
-    if (inputStr[i] != ',') tmpStr += inputStr[i];
-    else
-    {
-        if (Convert.ToInt32(tmpStr) > 0) count++;
-        tmpStr = string.Empty;
-    }
-}
-if (Convert.ToInt32(tmpStr) > 0) 
-{
-    count++;
-}
-
-Console.WriteLine($"Введено {count} чисел больше 0.");
-
-string ReadString(string message)
+string getUserValue(string message)
 {
     Console.Write(message);
-    return Console.ReadLine();
+    return Console.ReadLine()!;
 }
+
+int getResultTemp(string numb)
+{
+    int temp = 0;
+    int count = 0;
+    for (int i = 0; i < numb.Length; i++)
+    {
+        if (numb[i] != ',')
+        {
+            temp += numb[i];
+        }
+        else if(Convert.ToInt32(temp) > 0) 
+        {
+            count++;
+        }
+    }
+    if (Convert.ToInt32(temp) > 0) {count++;}
+    return count;
+}
+
+string numb = getUserValue("Введите числа через запятую: ");
+
+Console.WriteLine($"Число чисел > 0 = {getResultTemp(numb)}");
